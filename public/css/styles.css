@@ -1,0 +1,59 @@
+/* @font-face {
+    font-family: 'Unbounded';
+    src: url('/fonts/Unbounded-Regular.woff2') format('woff2'),
+         url('/fonts/Unbounded-Regular.woff') format('woff'),
+         url('/fonts/Unbounded-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Unbounded';
+    src: url('/fonts/Unbounded-Bold.woff2') format('woff2'),
+         url('/fonts/Unbounded-Bold.woff') format('woff'),
+         url('/fonts/Unbounded-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+body {
+    font-family: 'Unbounded', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.full-screen-section {
+    background-color: #A5B1D6;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sticky-header-wrapper {
+    width: 100%;
+    background-color: #A5B1D6;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.sticky-header {
+    max-width: 75%;
+    margin: 0 auto;
+    padding: 40px 0;
+    color: #FFFFFF; 
+    font-family: 'Unbounded', sans-serif;
+}
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-links li {
+    margin: 0 15px;
+}
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Unbounded', sans-serif;
+} */
