@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @vite('resources/css/app.css')
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600&display=swap">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <title>Home Page</title>
 </head>
 <body>
     @include('partials.header')
-    <div className="bg-pink">
-        <h1>Full Screen Section</h1>
-        <p>Content that fits the full screen.</p>
+    <div class="full-screen-section">
+        <h1>HELLO</h1>
     </div>
 </body>
 </html>

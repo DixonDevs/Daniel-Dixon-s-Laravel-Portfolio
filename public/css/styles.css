@@ -1,21 +1,10 @@
-/* @font-face {
-    font-family: 'Unbounded';
-    src: url('/fonts/Unbounded-Regular.woff2') format('woff2'),
-         url('/fonts/Unbounded-Regular.woff') format('woff'),
-         url('/fonts/Unbounded-Regular.ttf') format('truetype');
+@font-face {
+    font-family: 'Organical';
+    src: url('/fonts/spacetime-regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-@font-face {
-    font-family: 'Unbounded';
-    src: url('/fonts/Unbounded-Bold.woff2') format('woff2'),
-         url('/fonts/Unbounded-Bold.woff') format('woff'),
-         url('/fonts/Unbounded-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
 body {
-    font-family: 'Unbounded', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -25,6 +14,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.full-screen-section h1{
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 600; 
+    font-size: 120px;
+    margin-top: -176px;
+    
 }
 .sticky-header-wrapper {
     width: 100%;
@@ -39,21 +36,27 @@ body {
     margin: 0 auto;
     padding: 40px 0;
     color: #FFFFFF; 
-    font-family: 'Unbounded', sans-serif;
 }
 .nav-links {
+    font-family: 'Organical', sans-serif;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Spread items apart */
     list-style: none;
     margin: 0;
     padding: 0;
+    font-size: 25px;
+    width: 100%; /* Ensure items take full width */
+    max-width: 75%; /* Limit width to match sticky-header */
+    margin: 0 auto; /* Center items */
+    gap: 50px; /* Adjust the spacing between items */
 }
 .nav-links li {
     margin: 0 15px;
 }
 .nav-links a {
+    
     color: black;
     text-decoration: none;
     font-weight: bold;
-    font-family: 'Unbounded', sans-serif;
-} */
+    
+}
