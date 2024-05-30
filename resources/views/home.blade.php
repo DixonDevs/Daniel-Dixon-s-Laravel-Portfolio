@@ -11,6 +11,7 @@
     @include('partials.header')
     <div class="full-screen-section">
         <h1>HELLO</h1>
+        <p>I AM A SOFTWARE DEVELOPER</p>
     </div>
 </body>
 </html>
