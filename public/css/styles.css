@@ -11,37 +11,27 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Unbounded';
+    src: url('/fonts/Unbounded-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
     margin: 0;
     padding: 0;
 }
 
-/* PURPLE FULL SCREEN SECTION */
-.full-screen-section {
-    background-color: #A5B1D6;
-    height: 100vh; 
-    display: flex;
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
-    text-align: center; /* Center text */
-}
+/* ******************************************************************************** */
 
-.full-screen-section h1 {
-    font-family: 'Unbounded', sans-serif;
-    font-weight: 600; 
-    font-size: 120px;
-    margin: 0; /* Remove default margin */
-}
 
-.full-screen-section p {
-    font-family: 'Unbounded', sans-serif;
-    font-size: 40px;
-    margin-top: 20px; /* Add spacing between h1 and p */
-}
 
-/* HEADER SECTION */
+                               /* HEADER STYLES */
+
+
+
+/* ******************************************************************************** */
 .sticky-header-wrapper {
     width: 100%;
     background-color: #A5B1D6;
@@ -50,39 +40,66 @@ body {
     top: 0;
     z-index: 1000;
 }
+
 .sticky-header {
     max-width: 75%;
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 10px 0;
     color: #FFFFFF; 
+    border-bottom: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-/* NAVIGATION LINKS */
+/* ******************************************************************************** */
+
+
+
+                               /* NAVIGATION LINKS*/
+
+
+
+/* ******************************************************************************** */
 .nav-links {
     font-family: 'Inter', sans-serif; /* Apply the Inter font */
     display: flex;
-    justify-content: center; /* Spread items apart */
+    justify-content: center;
+    align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
-    font-size: 25px;
-    width: 100%; /* Ensure items take full width */
-    max-width: 75%; /* Limit width to match sticky-header */
-    margin: 0 auto; /* Center items */
-    gap: 50px; /* Adjust the spacing between items */
+    font-size: 18px;
+    gap: 30px; /* Adjust the spacing between items */
 }
+
 .nav-links li {
     margin: 0 15px;
 }
+
 .nav-links a {
     color: black;
     text-decoration: none;
     font-weight: bold;
 }
 
-/* BUTTON STYLES */
+.name-logo {
+    font-family: 'unbounded', sans-serif; 
+    color: black;
+    font-size: 40px;
+    margin-right: auto;
+}
+/* ******************************************************************************** */
+
+
+
+                               /* BUTTON STYLE */
+
+
+
+/* ******************************************************************************** */
 .get-started-button {
-    border: 2px solid black; /* Black border */
+    border: 3px solid black; /* Black border */
     background-color: white; /* White background */
     border-radius: 0px; /* No border radius */
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow down and to the right */
@@ -96,4 +113,87 @@ body {
 
 .get-started-button:hover {
     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+/* ******************************************************************************** */
+
+
+
+                               /* SECTION 1 */
+
+
+
+/* ******************************************************************************** */
+.full-screen-section {
+    background-color: #A5B1D6;
+    height: 88vh; 
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text */
+}
+
+.full-screen-section h1 {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 600; 
+    font-size: 120px;
+    margin: 0; /* Remove default margin */
+    margin-top: -200px;
+}
+
+.under-hello {
+    font-family: 'Unbounded', cursive;
+    font-size: 40px;
+    margin-top: 20px; /* Add spacing between h1 and p */
+    font-weight: 400;
+}
+.portfolio-button {
+    border: 3px solid black; /* Black border */
+    background-color: white; /* White background */
+    border-radius: 0px; /* No border radius */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow down and to the right */
+    padding: 20px 44px; /* Padding for the button */
+    margin-top: 40px;
+    cursor: pointer; /* Pointer cursor on hover */
+    font-family: 'Inter', sans-serif; /* Apply the Inter font */
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Font weight */
+    text-transform: uppercase; /* Uppercase text */
+}
+.portfolio-button {
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+/* ******************************************************************************** */
+
+
+
+                               /* SECTION 2 */
+
+
+
+/* ******************************************************************************** */
+.wrapper {
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.full-screen-section-2 {
+    max-width: 75%;
+    margin: 0 auto; /* Center the section horizontally */
+    background-color: #FFFFFF;
+    height: 88vh; 
+    display: flex;
+    justify-content: center; /* Stack children vertically */
+    align-items: center;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 150px; /* Adjust the gap between image and button */
+}
+
+.daniel-image {
+    justify-content: flex-start;
 }
