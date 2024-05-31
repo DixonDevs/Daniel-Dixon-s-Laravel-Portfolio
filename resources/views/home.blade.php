@@ -19,8 +19,8 @@
         <div class="content-wrapper">
             <img class="daniel-image" src="images\8bit image of Daniel.jpg" alt="8-bit Character of Daniel Dixon" width="600" height="650">
             <div class="about-me">
-            <strong class = "about-me-top">About Me</strong>
-            <h1 class = "about-me-middle"><strong>I am a Full Stack Developer/Business Owner</strong></h1>
+            <strong class="about-me-top">About Me</strong>
+            <h1 class="about-me-middle"><strong>I am a Full Stack Developer/Business Owner</strong></h1>
             <p>From a young age, I was drawn to technology, dreaming of the day I would have my own computer. When that day finally arrived, I was initially fascinated by playing 
                 Minecraft, spending countless hours navigating its blocky landscapes. However, beyond the gameplay, I became curious about the mechanics behind the game, sparking my 
                 interest in development.</p>
@@ -36,20 +36,54 @@
 <!-- Inline JavaScript -->
 <script>
     var button = document.getElementById('move-button');
-    document.addEventListener('mousemove', function(e) {
-        var dx = e.pageX - button.offsetLeft - button.offsetWidth / 2;
-        var dy = e.pageY - button.offsetTop - button.offsetHeight / 2;
-        var distance = Math.sqrt(dx * dx + dy * dy);
-        if (distance < 100) {
-            var newX = Math.random() * (window.innerWidth - button.offsetWidth);
-            var newY = Math.random() * (window.innerHeight - button.offsetHeight);
-            button.style.left = newX + 'px';
-            button.style.top = newY + 'px';
-            button.classList.add('unclickable');
+    var originalPosition = { left: button.offsetLeft, top: button.offsetTop };
+    var moveCount = 0;
+    var maxMoves = 10;
+    var buttonTexts = [
+        "Can't catch me!",
+        "Too slow!",
+        "Try again!",
+        "Almost!",
+        "Not quite!",
+        "Keep trying!",
+        "Missed me!",
+        "Getting closer!",
+        "So close!",
+        "Gotcha!"
+    ];
+
+    button.addEventListener('mouseover', function() {
+        if (moveCount < maxMoves) {
+            moveButton();
+            moveCount++;
         } else {
+            button.style.position = 'static'; // Reset position style
+            button.style.left = originalPosition.left + 'px';
+            button.style.top = originalPosition.top + 'px';
+            button.textContent = "OH im stuck!!!"; // Reset text content
             button.classList.remove('unclickable');
         }
     });
+
+    function moveButton() {
+        var newX = Math.random() * (window.innerWidth - button.offsetWidth);
+        var newY = Math.random() * (window.innerHeight - button.offsetHeight);
+        button.style.position = 'absolute'; // Ensure the button can move freely
+        button.style.left = newX + 'px';
+        button.style.top = newY + 'px';
+        button.textContent = buttonTexts[moveCount % buttonTexts.length]; // Change button text
+        button.parentElement.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'; // Enable link
+        button.classList.add('unclickable');
+    }
+
+    window.addEventListener("scroll", function() {
+    if (window.pageYOffset > 50) {
+        document.querySelector(".header").classList.add("active");
+    } else {
+        // Remove the 'active' class to make the header transparent again
+        document.querySelector(".header").classList.remove("active");
+    }
+});
 </script>
 </body>
 </html>

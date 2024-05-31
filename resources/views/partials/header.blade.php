@@ -5,7 +5,7 @@
             <li><a href="{{ route('home') }}">HOME</a></li>
             <li><a href="{{ route('about') }}">ABOUT</a></li>
             <li><a href="{{ route('contact') }}">CONTACT</a></li>
-            <li><button class="get-started-button">Get Started</button></li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" id="button-link"><button id="move-button" class="header-button">Start Game</button></a></li>
         </ul>
     </div>
 </div>
