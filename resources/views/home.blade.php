@@ -1,3 +1,5 @@
+<!-- resources/views/home.blade.php -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <title>Home Page</title>
+    @vite('resources/js/app.jsx')
 </head>
 <body>
 <div class="wrapper">
@@ -17,7 +20,7 @@
 
     <div class="full-screen-section-2">
         <div class="content-wrapper">
-            <img class="daniel-image" src="images\8bit image of Daniel.jpg" alt="8-bit Character of Daniel Dixon" width="600" height="650">
+            <img class="daniel-image" src="images/8bit image of Daniel.jpg" alt="8-bit Character of Daniel Dixon" width="600" height="650">
             <div class="about-me">
             <strong class="about-me-top">About Me</strong>
             <h1 class="about-me-middle"><strong>I am a Full Stack Developer/Business Owner</strong></h1>
@@ -31,7 +34,6 @@
             </div>     
         </div>
     </div>
-
 
     <div class="full-screen-section-3">
         <div class="content-wrapper-3">
@@ -50,10 +52,8 @@
     </div>
 </div>
 
-
-
-
-
+<MyComponent>
+</MyComponent>
 
 <!-- Inline JavaScript -->
 <script>
