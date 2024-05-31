@@ -31,7 +31,29 @@
             </div>     
         </div>
     </div>
+
+
+    <div class="full-screen-section-3">
+        <div class="content-wrapper-3">
+            <div class="experience">
+                <strong class="experience-title">Experience</strong>
+                <h1 class="experience-1">AceOne Technologies</h1>
+                <p>Full Stack Developer / October 2023 - Present</p>
+                <ul>
+                    <li>Manage multiple WordPress sites, ensuring smooth operation and implementing customizations as per client requirements.</li>
+                    <li>Maintain and develope web software using Laravel, utilizing PHP, HTML, CSS, and JavaScript to create robust and efficient applications
+                        while adhearing to best practice.</li>
+                    <li>Conduct regular maintenance and updates to ensure security and performance optimization of websites and web applications.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+
+
+
 
 <!-- Inline JavaScript -->
 <script>
@@ -75,15 +97,6 @@
         button.parentElement.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'; // Enable link
         button.classList.add('unclickable');
     }
-
-    window.addEventListener("scroll", function() {
-    if (window.pageYOffset > 50) {
-        document.querySelector(".header").classList.add("active");
-    } else {
-        // Remove the 'active' class to make the header transparent again
-        document.querySelector(".header").classList.remove("active");
-    }
-});
 </script>
 </body>
 </html>

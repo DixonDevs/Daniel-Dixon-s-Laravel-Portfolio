@@ -41,15 +41,6 @@ body {
     z-index: 1000;
 }
 
-/* .sticky-header-wrapper.active {
-    width: 100%;
-    background-color: #FFFFFF;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-} */
-
 .sticky-header {
     max-width: 75%;
     margin: 0 auto;
