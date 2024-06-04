@@ -1,15 +1,10 @@
 // resources/js/app.jsx
 
-import { createInertiaApp } from '@inertiajs/inertia-react';
-import { InertiaProgress } from '@inertiajs/progress';
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
+import HomeComponent from './Pages/HomeComponent';
 
-createInertiaApp({
-  resolve: name => import(`./Pages/${name}`).then(module => module.default),
-  setup({ el, App, props }) {
-    render(<App {...props} />, el);
-  },
-});
-
-InertiaProgress.init();
+const homeElement = document.getElementById('home-component');
+if (homeElement) {
+    ReactDOM.render(<HomeComponent />, homeElement);
+}

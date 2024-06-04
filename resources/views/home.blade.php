@@ -10,8 +10,8 @@
     @vite('resources/js/app.jsx')
 </head>
 <body>
+@include('partials.header')
 <div class="wrapper">
-    @include('partials.header')
     <div class="full-screen-section">
         <h1>HELLO</h1>
         <p class="under-hello">I AM A SOFTWARE DEVELOPER</p>
@@ -19,7 +19,7 @@
     </div>
 
     <div class="full-screen-section-2">
-        <div class="content-wrapper">
+        <div class="content-wrapper-2">
             <img class="daniel-image" src="images/8bit image of Daniel.jpg" alt="8-bit Character of Daniel Dixon" width="600" height="650">
             <div class="about-me">
             <strong class="about-me-top">About Me</strong>
@@ -34,7 +34,8 @@
             </div>     
         </div>
     </div>
-
+</div>
+<div class="wrapper-2">
     <div class="full-screen-section-3">
         <div class="content-wrapper-3">
             <div class="experience">
@@ -42,19 +43,15 @@
                 <h1 class="experience-1">AceOne Technologies</h1>
                 <p>Full Stack Developer / October 2023 - Present</p>
                 <ul>
-                    <li>Manage multiple WordPress sites, ensuring smooth operation and implementing customizations as per client requirements.</li>
-                    <li>Maintain and develope web software using Laravel, utilizing PHP, HTML, CSS, and JavaScript to create robust and efficient applications
+                    <li class="animated-item">Manage multiple WordPress sites, ensuring smooth operation and implementing customizations as per client requirements.</li>
+                    <li class="animated-item">Maintain and develope web software using Laravel, utilizing PHP, HTML, CSS, and JavaScript to create robust and efficient applications
                         while adhearing to best practice.</li>
-                    <li>Conduct regular maintenance and updates to ensure security and performance optimization of websites and web applications.</li>
+                    <li class="animated-item">Conduct regular maintenance and updates to ensure security and performance optimization of websites and web applications.</li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
-
-<MyComponent>
-</MyComponent>
-
 <!-- Inline JavaScript -->
 <script>
     var button = document.getElementById('move-button');
@@ -97,6 +94,32 @@
         button.parentElement.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'; // Enable link
         button.classList.add('unclickable');
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const items = entry.target.querySelectorAll('.animated-item');
+                items.forEach((item, index) => {
+                    item.style.setProperty('--animation-delay', `${index * 0.3}s`);
+                    item.classList.add('visible');
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    const sections = document.querySelectorAll('.full-screen-section-3');
+    sections.forEach((section) => {
+        observer.observe(section);
+    });
+});
 </script>
 </body>
 </html>

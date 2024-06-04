@@ -11,6 +11,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Unbounded';
     src: url('/fonts/Unbounded-VariableFont_wght.ttf') format('truetype');
@@ -52,16 +53,6 @@ body {
     justify-content: space-between;
 }
 
-/* .sticky-header.active {
-    max-width: 75%;
-    margin: 0 auto;
-    padding: 10px 0;
-    color: #FFFFFF; 
-    border-bottom: 3px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} */
 /* ******************************************************************************** */
 
 
@@ -94,11 +85,12 @@ body {
 }
 
 .name-logo {
-    font-family: 'unbounded', sans-serif; 
+    font-family: 'Unbounded', sans-serif; 
     color: black;
     font-size: 40px;
     margin-right: auto;
 }
+
 /* ******************************************************************************** */
 
 
@@ -108,21 +100,36 @@ body {
 
 
 /* ******************************************************************************** */
-.header-button {
+.header-button, .portfolio-button {
+    position: relative;
     border: 3px solid black; /* Black border */
     background-color: white; /* White background */
     border-radius: 0px; /* No border radius */
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow down and to the right */
     padding: 10px 25px; /* Padding for the button */
     cursor: pointer; /* Pointer cursor on hover */
     font-family: 'Inter', sans-serif; /* Apply the Inter font */
     font-size: 18px; /* Font size */
     font-weight: bold; /* Font weight */
     text-transform: uppercase; /* Uppercase text */
+    z-index: 1; /* Ensure the button is above the shadow */
+    box-shadow: none; /* Remove default box-shadow */
 }
 
-.header-button:hover {
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+.header-button::after, .portfolio-button::after {
+    content: '';
+    position: absolute;
+    top: 10px; /* Position the shadow behind the button */
+    left: 10px; /* Position the shadow behind the button */
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1; /* Ensure the shadow is below the button */
+    transition: top 0.3s, left 0.3s; /* Smooth transition for hover effect */
+}
+
+.header-button:hover::after, .portfolio-button:hover::after {
+    top: 15px;
+    left: 15px;
 }
 
 /* ******************************************************************************** */
@@ -158,22 +165,6 @@ body {
     margin-top: 20px; /* Add spacing between h1 and p */
     font-weight: 400;
 }
-.portfolio-button {
-    border: 3px solid black; /* Black border */
-    background-color: white; /* White background */
-    border-radius: 0px; /* No border radius */
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow down and to the right */
-    padding: 20px 44px; /* Padding for the button */
-    margin-top: 40px;
-    cursor: pointer; /* Pointer cursor on hover */
-    font-family: 'Inter', sans-serif; /* Apply the Inter font */
-    font-size: 18px; /* Font size */
-    font-weight: bold; /* Font weight */
-    text-transform: uppercase; /* Uppercase text */
-}
-.portfolio-button {
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
-}
 
 /* ******************************************************************************** */
 
@@ -199,19 +190,19 @@ body {
     align-items: center;
 }
 
-.content-wrapper {
+.content-wrapper-2 {
     display: flex;
     flex-direction: row;
     gap: 150px; /* Adjust the gap between image and button */
 }
 
-.about-me{
+.about-me {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.about-me p{
+.about-me p {
     font-family: "Inter", sans-serif;
     font-size: 20px;
 }
@@ -237,6 +228,71 @@ body {
 
 
 /* ******************************************************************************** */
-.full-screen-section-3{
-    
+.wrapper-2 {
+    width: 100%;
+    background-color: #A5B1D6;
+}
+
+.full-screen-section-3 {
+    padding: 100px 0; /* Add padding to the section */
+    max-width: 50%;
+    margin: 0 auto; /* Center the section horizontally */
+    background-color: #A5B1D6;
+    height: 100vh; 
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: start; /* Align content to the top */
+}
+
+.content-wrapper-3 {
+    display: flex;
+    flex-direction: row; /* Align children in a row */
+    justify-content: center; /* Center content horizontally */
+    align-items: start; /* Align content to the top */
+}
+
+.experience h1 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 40px;
+    margin: 0; /* Remove default margin */
+}
+
+.experience-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.experience p {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    margin: 10px 0; /* Add spacing between items */
+}
+
+.experience li {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    margin: 10px 0; /* Add spacing between items */
+}
+
+
+/* Animation styles */
+@keyframes slideUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animated-item {
+    opacity: 0;
+    animation: slideUp 0.5s forwards;
+}
+
+.animated-item.visible {
+    animation-delay: var(--animation-delay);
+    animation-play-state: running;
 }
