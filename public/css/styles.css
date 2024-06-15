@@ -221,17 +221,26 @@ body {
 .wrapper-2 {
     width: 100%;
     background-color: #A5B1D6;
+    padding-top: 50px; /* Add padding to the top */
+    padding-bottom: 50px;
 }
 
 .full-screen-section-3 {
-    padding: 100px 0; /* Add padding to the section */
+    padding: 50px 0; /* Add padding to the section */
+    padding-left: 50px; /* Add padding to the left */
+    padding-right: 50px; /* Add padding to the right */
     max-width: 50%;
     margin: 0 auto; /* Center the section horizontally */
     background-color: #A5B1D6;
-    height: 100vh; 
+    height: 70vh; 
     display: flex;
     justify-content: center; /* Center content horizontally */
     align-items: start; /* Align content to the top */
+    border: 100px solid #FFFFFF; /* Add border */
+    border-left: 175px solid #FFFFFF; /* Add border */
+    border-right: 175px solid #FFFFFF; /* Add border */
+    border-radius: 10px; /* Specify the border radius */
+    box-shadow: inset #131313 5px 5px  0px; /* Add shadow */
 }
 
 .content-wrapper-3 {
@@ -239,6 +248,7 @@ body {
     flex-direction: row; /* Align children in a row */
     justify-content: center; /* Center content horizontally */
     align-items: start; /* Align content to the top */
+    border-radius: 10px;
 }
 
 .experience h1 {

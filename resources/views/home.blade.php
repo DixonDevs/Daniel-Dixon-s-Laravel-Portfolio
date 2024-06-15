@@ -24,13 +24,9 @@
             <div class="about-me">
             <strong class="about-me-top">About Me</strong>
             <h1 class="about-me-middle"><strong>I am a Full Stack Developer/Business Owner</strong></h1>
-            <p>From a young age, I was drawn to technology, dreaming of the day I would have my own computer. When that day finally arrived, I was initially fascinated by playing 
-                Minecraft, spending countless hours navigating its blocky landscapes. However, beyond the gameplay, I became curious about the mechanics behind the game, sparking my 
-                interest in development.</p>
+            <p>From a young age, I was drawn to technology, dreaming of the day I would have my own computer. When that day finally arrived, I was initially fascinated by playing Minecraft, spending countless hours navigating its blocky landscapes. However, beyond the gameplay, my curiosity about the game's mechanics sparked my interest in coding and programming. This fascination evolved into a passion for software development, leading me to become a full-stack web developer captivated by the intricacies of the field.</p>
 
-            <p>Although I didn't pursue game development, this curiosity evolved into a passion for coding and programming. Now, as a full stack web developer, 
-                I'm captivated by the intricacies of software development. My journey began with Minecraft and has transformed into a continuous pursuit of knowledge and growth 
-                in the ever-evolving field of technology.</p>
+            <p>To get my foot in the door of web development, I started DBD Branding Co LLC, a company dedicated to producing quality websites at an affordable price. This venture allowed me to gain valuable experience and transition into real development, transforming my early interest in technology into a continuous pursuit of knowledge and growth in the ever-evolving tech landscape.</p>
             </div>     
         </div>
     </div>
@@ -118,9 +114,9 @@ const observer = new IntersectionObserver(entries => {
         if(entry.isIntersecting){
             entry.target.classList.add('show');
         }
-        else{
-            entry.target.classList.remove('show')
-        }
+        // else{
+        //     entry.target.classList.remove('show')
+        // }
     })
 });
 
