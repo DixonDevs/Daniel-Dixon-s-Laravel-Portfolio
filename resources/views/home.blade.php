@@ -55,6 +55,22 @@
             </div>
         </div>
     </div>
+    <div class="wrapper-3">
+    <div class="full-screen-section-4">
+        <div class="content-wrapper-4">
+            <div class="contact">
+                <strong class="contact-title">Get in contact with me!</strong>
+                <h1 class="socials">Socials</h1>
+                <div class="social-links">
+                    <a href="https://github.com/DixonDevs"><img src="images/github-mark-white.png" alt="GitHub"></a>
+                    <a href="https://www.facebook.com/daniel.dixon.58511"><img src="images/Facebook_Logo_Secondary.png" alt="Facebook"></a>
+                    <a href="https://www.linkedin.com/in/daniel-dixon-312147209/"><img src="images/In-Blue-128.png" alt="LinkedIn"></a>
+                    <a href="https://discordapp.com/channels/@me/iceddapper/"><img src="images/discord-mark-blue.svg" alt="Discord"></a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
     
 </div>
 <!-- Inline JavaScript -->
