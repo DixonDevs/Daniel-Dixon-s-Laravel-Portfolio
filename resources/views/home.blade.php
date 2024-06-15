@@ -40,13 +40,21 @@
         <div class="content-wrapper-3">
             <div class="experience">
                 <strong class="experience-title">Experience</strong>
-                <h1 class="experience-1">AceOne Technologies</h1>
-                <p>Full Stack Developer / October 2023 - Present</p>
+                <h1 class="experience-1, hidden">AceOne Technologies</h1>
+                <p class="hidden">Full Stack Developer / October 2023 - Present</p>
                 <ul>
-                    <li class="animated-item">Manage multiple WordPress sites, ensuring smooth operation and implementing customizations as per client requirements.</li>
-                    <li class="animated-item">Maintain and develope web software using Laravel, utilizing PHP, HTML, CSS, and JavaScript to create robust and efficient applications
+                    <li class="hidden">Manage multiple WordPress sites, ensuring smooth operation and implementing customizations as per client requirements.</li>
+                    <li class="hidden">Maintain and develope web software using Laravel, utilizing PHP, HTML, CSS, and JavaScript to create robust and efficient applications
                         while adhearing to best practice.</li>
-                    <li class="animated-item">Conduct regular maintenance and updates to ensure security and performance optimization of websites and web applications.</li>
+                    <li class="hidden">Conduct regular maintenance and updates to ensure security and performance optimization of websites and web applications.</li>
+                </ul>
+                <h1 class="experience-1, hidden">DBD Branding Co. LLC</h1>
+                <p class="hidden">Owner/ Wordpress Developer / November 2022 - Present</p>
+                <ul>
+                    <li class="hidden">Create and Design several Websites using Wordpress CMS</li>
+                    <li class="hidden">Create and implement custom plugins and themes to meet client requirements and enhance website functionality.</li>
+                    <li class="hidden">Provide ongoing support and maintenance to ensure optimal performance and security of websites.</li>
+                    <li class="hidden">Web Hosting and Email hosting provider.</li>
                 </ul>
             </div>
         </div>
@@ -103,23 +111,22 @@
         threshold: 0.1
     };
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                const items = entry.target.querySelectorAll('.animated-item');
-                items.forEach((item, index) => {
-                    item.style.setProperty('--animation-delay', `${index * 0.3}s`);
-                    item.classList.add('visible');
-                });
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
+    const hidden_elements = document.querySelectorAll('.hidden')
 
-    const sections = document.querySelectorAll('.full-screen-section-3');
-    sections.forEach((section) => {
-        observer.observe(section);
-    });
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+        else{
+            entry.target.classList.remove('show')
+        }
+    })
+});
+
+hidden_elements.forEach(el => {
+    observer.observe(el);
+});
 });
 </script>
 </body>

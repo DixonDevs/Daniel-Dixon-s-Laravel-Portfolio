@@ -242,6 +242,7 @@ body {
 }
 
 .experience h1 {
+    
     font-family: 'Unbounded', sans-serif;
     font-size: 40px;
     margin: 0; /* Remove default margin */
@@ -277,12 +278,16 @@ body {
     }
 }
 
-.animated-item {
+.hidden{
+    transition: all 1s;
     opacity: 0;
-    animation: slideUp 0.5s forwards;
+    filter: blur(5px);
+    transform: translateY(200px);
 }
 
-.animated-item.visible {
-    animation-delay: var(--animation-delay);
-    animation-play-state: running;
+.show{
+    animation: slideUp 1s ease-in-out;
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
 }
