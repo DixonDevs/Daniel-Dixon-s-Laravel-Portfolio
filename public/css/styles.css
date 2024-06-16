@@ -345,6 +345,11 @@ body {
     font-size: 40px;
     margin: 0; /* Remove default margin */
 }
+.contact p {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    margin: 10px 0; /* Add spacing between items */
+}
 .social-links {
     display: flex;
     justify-content: space-between; /* or space-between/center depending on your layout preference */

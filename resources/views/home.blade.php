@@ -59,8 +59,8 @@
     <div class="full-screen-section-4">
         <div class="content-wrapper-4">
             <div class="contact">
-                <strong class="contact-title">Get in contact with me!</strong>
-                <h1 class="socials">Socials</h1>
+                <h1 class="socials">Contact Me!</h1>
+                <p>Want to get in touch? I am always down to talk to new people! Please reach out on any of the following:</p>
                 <div class="social-links">
                     <a href="https://github.com/DixonDevs"><img src="images/github-mark-white.png" alt="GitHub"></a>
                     <a href="https://www.facebook.com/daniel.dixon.58511"><img src="images/Facebook_Logo_Secondary.png" alt="Facebook"></a>
