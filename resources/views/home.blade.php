@@ -11,14 +11,18 @@
 </head>
 <body>
 @include('partials.header')
-<div class="wrapper">
+<div id="home" class="wrapper">
     <div id="main" class="full-screen-section">
     <h1 id="hello"></h1>
     <p id="description" class="under-hello"></p>
         <button class="portfolio-button">See Portfolio</button>
     </div>
-
-    <div class="full-screen-section-2">
+<button class="back-to-top">
+    <a href="#home">
+        <img src="images/top-arrow.png" alt="Top Arrow">
+    </a>
+</button>
+    <div id="about" class="full-screen-section-2">
         <div class="content-wrapper-2">
             <img class="daniel-image" src="images/8bit image of Daniel.jpg" alt="8-bit Character of Daniel Dixon" width="600" height="650">
             <div class="about-me">
@@ -55,7 +59,8 @@
             </div>
         </div>
     </div>
-    <div id="socials">
+</div>
+<div id="socials">
     <div id="contact" class="full-screen-section-4">
         <div class="content-wrapper-4">
             <div class="contact">
@@ -70,7 +75,6 @@
             </div>
         </div>
     </div>
-    
 </div>
 <!-- Inline JavaScript -->
 <script>
@@ -198,7 +202,12 @@ VANTA.NET({
   minHeight: 200.00,
   minWidth: 200.00,
   scale: 1.00,
-  scaleMobile: 1.00
+  scaleMobile: 1.00,
+  color: 0xffffff,
+  backgroundColor: 0xa5b1d6,
+  points: 13.00,
+  maxDistance: 20.00,
+  spacing: 15.00
 })
 </script>
 </body>
