@@ -19,6 +19,10 @@
     font-style: normal;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     margin: 0;
     padding: 0;
@@ -47,7 +51,6 @@ body {
     margin: 0 auto;
     padding: 10px 0;
     color: #FFFFFF; 
-    border-bottom: 3px solid black;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -236,11 +239,6 @@ body {
     display: flex;
     justify-content: center; /* Center content horizontally */
     align-items: start; /* Align content to the top */
-    border: 100px solid #FFFFFF; /* Add border */
-    border-left: 175px solid #FFFFFF; /* Add border */
-    border-right: 175px solid #FFFFFF; /* Add border */
-    border-radius: 10px; /* Specify the border radius */
-    box-shadow: inset #131313 5px 5px  0px; /* Add shadow */
 }
 
 .content-wrapper-3 {
@@ -314,19 +312,19 @@ body {
 
 .wrapper-3 {
     width: 100%;
-    background-color: #A5B1D6;
+    background-color: #a5b1d600;
     padding-top: 50px; /* Add padding to the top */
     padding-bottom: 50px;
 }
 
 .full-screen-section-4 {
-    padding: 50px 0; /* Add padding to the section */
+    padding: 70px 0; /* Add padding to the section */
     padding-left: 50px; /* Add padding to the left */
     padding-right: 50px; /* Add padding to the right */
     max-width: 50%;
     margin: 0 auto; /* Center the section horizontally */
-    background-color: #A5B1D6;
-    height: 30vh; 
+    background-color: #a5b1d600;
+    height: 20vh; 
     display: flex;
     justify-content: center; /* Center content horizontally */
     align-items: start; /* Align content to the top */
@@ -340,15 +338,16 @@ body {
 }
 
 .contact h1 {
-    
     font-family: 'Unbounded', sans-serif;
     font-size: 40px;
     margin: 0; /* Remove default margin */
+    color: #FFFFFF;
 }
 .contact p {
     font-family: 'Inter', sans-serif;
     font-size: 20px;
     margin: 10px 0; /* Add spacing between items */
+    color: #FFFFFF;
 }
 .social-links {
     display: flex;

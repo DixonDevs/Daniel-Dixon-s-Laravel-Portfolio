@@ -12,9 +12,9 @@
 <body>
 @include('partials.header')
 <div class="wrapper">
-    <div class="full-screen-section">
-        <h1>HELLO</h1>
-        <p class="under-hello">I AM A SOFTWARE DEVELOPER</p>
+    <div id="main" class="full-screen-section">
+    <h1 id="hello"></h1>
+    <p id="description" class="under-hello"></p>
         <button class="portfolio-button">See Portfolio</button>
     </div>
 
@@ -55,8 +55,8 @@
             </div>
         </div>
     </div>
-    <div class="wrapper-3">
-    <div class="full-screen-section-4">
+    <div id="socials">
+    <div id="contact" class="full-screen-section-4">
         <div class="content-wrapper-4">
             <div class="contact">
                 <h1 class="socials">Contact Me!</h1>
@@ -67,7 +67,6 @@
                     <a href="https://www.linkedin.com/in/daniel-dixon-312147209/"><img src="images/In-Blue-128.png" alt="LinkedIn"></a>
                     <a href="https://discordapp.com/channels/@me/iceddapper/"><img src="images/discord-mark-blue.svg" alt="Discord"></a>
                 </div>
-            </div>
             </div>
         </div>
     </div>
@@ -140,6 +139,67 @@ hidden_elements.forEach(el => {
     observer.observe(el);
 });
 });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+<script>
+VANTA.BIRDS({
+  el: "#main",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  backgroundColor: 0xa5b1d6,
+  color1: 0xe00ff,
+  colorMode: "lerp",
+  birdSize: .80,
+//   wingSpan: 16.00,
+//   speedLimit: 4.00,
+  separation: 100.00,
+//   alignment: 30.00,
+//   cohesion: 73.00
+})
+</script>
+
+
+<script>
+    var textArray = ["HELLO", "I AM A SOFTWARE DEVELOPER"];
+    var elementArray = ["hello", "description"];
+    var i = 0;
+    var j = 0;
+    var speed = 90;
+
+    function typeWriter() {
+      if (i < textArray[j].length) {
+        document.getElementById(elementArray[j]).innerHTML += textArray[j].charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      } else if (j < textArray.length - 1) {
+        i = 0;
+        j++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    // Call the typeWriter function to start the typing effect
+    typeWriter();
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+<script>
+VANTA.NET({
+  el: "#socials",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00
+})
 </script>
 </body>
 </html>
